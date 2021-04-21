@@ -7,11 +7,9 @@ public class Comanda {
 	private Integer id;
 	
 	private Date dataHora = new Date();
-	private String data;
-	private String hora;
 	private double valor;
+	private boolean encerra;
 	
-	private Cliente cliente;
 	private Funcionário funcionario;
 	private List<Serviços> servicos;
 	
@@ -38,7 +36,7 @@ public class Comanda {
 
 	@Override
 	public String toString() {
-		return data + " " + hora + " " + valor + " " + cliente.getNome() + " " + funcionario.getNome();
+		return dataHora + " " + valor + " " + funcionario.getNome();
 	}
 	
 	

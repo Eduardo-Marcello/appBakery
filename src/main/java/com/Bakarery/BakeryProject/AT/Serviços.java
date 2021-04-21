@@ -3,14 +3,9 @@ package com.Bakarery.BakeryProject.AT;
 public abstract class Serviços {
 	private Integer id;
 	
-	private String tipoServ;
-	private final int CARRINHO = 1;
-	private final int BUFFET = 2;
-
-	public Serviços(Integer id, String tipoServ) {
-		this.id = id;
-		this.tipoServ = tipoServ;
-	}
+	private String nomeServico;
+	private String situacao;
+	private boolean flagSituacao;
 	
 	public Integer getId() {
 		return id;
@@ -20,25 +15,17 @@ public abstract class Serviços {
 		this.id = id;
 	}
 	
-	public String getTipoServ() {
-		return tipoServ;
+	public String getNomeServico() {
+		return nomeServico;
 	}
 	
-	public void setTipoServ(String tipoServ) {
-		this.tipoServ = tipoServ;
-	}
-	
-	public int getCARRINHO() {
-		return CARRINHO;
-	}
-	
-	public int getBUFFET() {
-		return BUFFET;
+	public void setNomeServico(String nomeServico) {
+		this.nomeServico = nomeServico;
 	}
 	
 	@Override
 	public String toString() {
-		return tipoServ + " "+ CARRINHO + " " + BUFFET;
+		return nomeServico + " " + situacao + " ";
 	}
 	
 	

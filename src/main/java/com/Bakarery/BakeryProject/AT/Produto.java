@@ -1,18 +1,11 @@
 package com.Bakarery.BakeryProject.AT;
 
-public class Carrinho_Compras extends Serviços {
+public class Produto extends Serviços {
 	private int codigoProduto;
 	private String nomeProduto;
 	private String classificacao;
 	private double preco;
-	
-	public Carrinho_Compras(Integer id, String tipoServ, int codigoProduto, String nomeProduto, String classificacao, double preco) {
-		super(id,tipoServ);
-		this.codigoProduto = codigoProduto;
-		this.nomeProduto = nomeProduto;
-		this.classificacao = classificacao;
-		this.preco = preco;
-	}
+
 
 	public int getCodigoProduto() {
 		return codigoProduto;
@@ -51,7 +44,5 @@ public class Carrinho_Compras extends Serviços {
 		return super.toString()+ " "+ codigoProduto +" " + nomeProduto + " "
 				+ classificacao + " " + preco;
 	}
-	
-	
 	
 }
