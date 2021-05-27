@@ -1,4 +1,4 @@
-package com.Bakarery.BakeryProject.AT;
+package com.Bakarery.BakeryProject.model.negocio;
 
 import java.util.Date;
 import java.util.List;

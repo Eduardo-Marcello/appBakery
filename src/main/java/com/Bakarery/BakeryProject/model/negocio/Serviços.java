@@ -1,4 +1,4 @@
-package com.Bakarery.BakeryProject.AT;
+package com.Bakarery.BakeryProject.model.negocio;
 
 public abstract class Serviços {
 	private Integer id;
