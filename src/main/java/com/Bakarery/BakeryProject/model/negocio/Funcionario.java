@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="TClientes")
-public class Cliente {
+@Table(name ="TFuncionarios")
+public class Funcionario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,19 +18,24 @@ public class Cliente {
 	private String email;
 	private String password;
 	private int idade;
+	private String cargo;
+	private double salario;
 	
-	public Cliente() {
+	public Funcionario() {
 		
 	}
-
-	public Cliente(String nome, String cpf, String email, String password, int idade) {
+	
+	public Funcionario(Integer id, String nome, String cpf, String email, String password, int idade, String cargo, double salario) {
+		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.email = email;
 		this.password = password;
 		this.idade = idade;
+		this.cargo = cargo;
+		this.salario = salario;
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
@@ -55,20 +60,20 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 
-	public int getIdade() {
-		return idade;
+	public double getSalario() {
+		return salario;
 	}
 
-	public void setIdade(int idade) {
-		this.idade = idade;
+	public void setSalario(double salario) {
+		this.salario = salario;
 	}
 
-	public String getSenha() {
-		return password;
+	public String getCargo() {
+		return cargo;
 	}
 
-	public void setSenha(String password) {
-		this.password = password;
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
 	}
 
 	public String getEmail() {
@@ -79,10 +84,20 @@ public class Cliente {
 		this.email = email;
 	}
 
-	@Override
-	public String toString() {
-		return "Cliente [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", email=" + email + ", senha=" + password
-				+ ", idade=" + idade + "]";
+	public String getSenha() {
+		return password;
+	}
+
+	public void setSenha(String password) {
+		this.password = password;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
 	
 	

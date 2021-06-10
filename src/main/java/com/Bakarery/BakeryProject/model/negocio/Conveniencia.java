@@ -1,6 +1,18 @@
 package com.Bakarery.BakeryProject.model.negocio;
 
-public class Produto extends Serviços {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name ="TConveniencia")
+public class Conveniencia extends Serviços {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	private int codigoProduto;
 	private String nomeProduto;
 	private String classificacao;

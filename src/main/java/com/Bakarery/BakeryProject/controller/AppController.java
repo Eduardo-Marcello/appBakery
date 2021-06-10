@@ -12,8 +12,28 @@ public class AppController {
 			return "index";
 		}
 		
-		@RequestMapping(value = "/cadastro", method =  RequestMethod.GET)
-		public String telaCadastro() {
-			return "pessoa/cadastro";
+		@RequestMapping(value = "/cadastroCliente", method =  RequestMethod.GET)
+		public String telaCadastroCliente() {
+			return "cliente/cadastroCliente";
+		}
+		
+		@RequestMapping(value = "/cadastroFuncionario", method =  RequestMethod.GET)
+		public String telaCadastroFuncionario() {
+			return "funcionario/cadastroFuncionario";
+		}
+		
+		@RequestMapping(value = "/cadastroBuffet", method =  RequestMethod.GET)
+		public String telaCadastroBuffet() {
+			return "buffet/cadastroBuffet";
+		}
+		
+		@RequestMapping(value = "/cadastroDelivery", method =  RequestMethod.GET)
+		public String telaCadastroDelivery() {
+			return "delivery/cadastroDelivery";
+		}
+		
+		@RequestMapping(value = "/cadastroConveniencia", method =  RequestMethod.GET)
+		public String telaCadastroConveniencia() {
+			return "conveniencia/cadastroConveniencia";
 		}
 }

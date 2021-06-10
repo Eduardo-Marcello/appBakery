@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="TPessoa")
-public class Pessoa {
+@Table(name ="TUsuario")
+public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,11 +16,11 @@ public class Pessoa {
 	private String nome;
 	private String email;
 	
-	public Pessoa() {
+	public Usuario() {
 		
 	}
 	
-	public Pessoa(String nome, String email) {
+	public Usuario(String nome, String email) {
 		this.nome = nome;
 		this.email = email;
 	}
