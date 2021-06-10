@@ -24,9 +24,10 @@ public class Funcionario {
 	public Funcionario() {
 		
 	}
-	
-	public Funcionario(Integer id, String nome, String cpf, String email, String password, int idade, String cargo, double salario) {
-		this.id = id;
+
+
+	public Funcionario(String nome, String cpf, String email, String password, int idade, String cargo,
+			double salario) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.email = email;
@@ -35,6 +36,7 @@ public class Funcionario {
 		this.cargo = cargo;
 		this.salario = salario;
 	}
+
 
 	public Integer getId() {
 		return id;
@@ -84,20 +86,18 @@ public class Funcionario {
 		this.email = email;
 	}
 
-	public String getSenha() {
-		return password;
-	}
-
-	public void setSenha(String password) {
-		this.password = password;
-	}
-
 	public int getIdade() {
 		return idade;
 	}
 
 	public void setIdade(int idade) {
 		this.idade = idade;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	

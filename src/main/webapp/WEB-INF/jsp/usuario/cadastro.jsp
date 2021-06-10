@@ -9,7 +9,7 @@
 <body>
 
 	<div class="container">
-		<form action="/pessoa/incluir" method="post">
+		<form action="/usuario/incluir" method="post">
 		
 			<div class="form-group">
 			  <label>Nome:</label>

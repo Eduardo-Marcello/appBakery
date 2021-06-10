@@ -7,11 +7,13 @@
 </head>
 <body>
 
-		<h1>AT</h1>
+		<h1>Tela Inicial</h1>
 		
 		<h2>Projeto de Bloco</h2>
 		
-		<h3>Eduardo Marcello</h3>
+		<h3>${user.nome}</h3>
+		<h3>${user.email}</h3>
+		<h3>${user.cargo}</h3>
 		
 		<a href="/cadastro">Cadastro</a>
 		

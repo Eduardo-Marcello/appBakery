@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AppController {
 		
-		@RequestMapping(value = "/", method =  RequestMethod.GET)
+		@RequestMapping(value = "/home", method =  RequestMethod.GET)
 		public String telaInicial() {
 			return "index";
 		}
 		
-		@RequestMapping(value = "/cadastroCliente", method =  RequestMethod.GET)
-		public String telaCadastroCliente() {
-			return "cliente/cadastroCliente";
+		@RequestMapping(value = "/", method =  RequestMethod.GET)
+		public String telaLogin() {
+			return "login";
 		}
 		
 		@RequestMapping(value = "/cadastroFuncionario", method =  RequestMethod.GET)
