@@ -1,23 +1,32 @@
 package com.Bakarery.BakeryProject.model.negocio;
 
-import java.util.Date;
-import java.util.List;
-
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
+@Table(name ="TComanda")
 public class Comanda {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-	private Date dataHora = new Date();
+	private int codigoComanda;
 	private double valor;
-	private boolean encerra;
+	private String data;
+	private String hora;
 	
-	private Funcionario funcionario;
-	private List<Serviços> servicos;
+//	private Funcionario funcionario;
+//	private List<Serviços> servicos;
 	
-	public Comanda(Integer id, double valor) {
-		this.id = id;
+	public Comanda() {
+		
+	}
+	
+	public Comanda(int codigoComanda, double valor) {
+		this.codigoComanda = codigoComanda;
 		this.valor = valor;
 	}
 
@@ -29,6 +38,14 @@ public class Comanda {
 		this.id = id;
 	}
 
+	public int getCodigoComanda() {
+		return codigoComanda;
+	}
+
+	public void setCodigoComanda(int codigoComanda) {
+		this.codigoComanda = codigoComanda;
+	}
+
 	public double getValor() {
 		return valor;
 	}
@@ -37,17 +54,26 @@ public class Comanda {
 		this.valor = valor;
 	}
 
-	public Date getDataHora() {
-		return dataHora;
+	public String getData() {
+		return data;
 	}
 
-	public void setDataHora(Date dataHora) {
-		this.dataHora = dataHora;
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
 	}
 
 	@Override
 	public String toString() {
-		return dataHora + " " + valor + " " + funcionario.getNome();
+		return "Comanda [codigoComanda=" + codigoComanda + ", valor=" + valor + ", data=" + data + ", hora=" + hora
+				+ "]";
 	}
 	
 	

@@ -18,7 +18,7 @@
 	<div class="wrapper fadeInDown">
 		<div id="formContent">
 
-			<form action="/funcionario/login" method="post">
+			<form action="/usuario/login" method="post">
 				<div class="form-group">
 					<label>Login:</label> <input type="text" class="form-control"
 						name="email" id="email" required="">
@@ -39,7 +39,7 @@
 			</div>
 
 			<div id="formFooter">
-				<a class="underlineHover" href="cadastro.jsp">Não possui
+				<a class="underlineHover" href="/usuario">Não possui
 					cadastro?</a>
 			</div>
 		</div>

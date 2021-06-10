@@ -13,26 +13,26 @@
 <body>
 
 	<div class="container">
-		<c:if test="${not empty clientes}">
+		<c:if test="${not empty comandas}">
 			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>Id</th>
-						<th>Nome</th>
-						<th>CPF</th>
-						<th>Idade</th>
-						<th>Email</th>
+						<th>Codigo</th>
+						<th>Valor</th>
+						<th>Data</th>
+						<th>Hora</th>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="clientes" items="${clientes}">
+					<c:forEach var="com" items="${comandas}">
 						<tr>
-							<td>${clientes.id}</td>
-							<td>${clientes.nome}</td>
-							<td>${clientes.cpf}</td>
-							<td>${clientes.idade}</td>
-							<td>${clientes.email}</td>
-							<td><a href="/cliente/${clientes.id}/excluir">excluir</a></td>
+							<td>${com.id}</td>
+							<td>${com.codigoComanda}</td>
+							<td>${com.valor}</td>
+							<td>${com.data}</td>
+							<td>${com.hora}</td>
+							<td><a href="/comanda/${com.id}/excluir">excluir</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

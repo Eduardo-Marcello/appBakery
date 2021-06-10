@@ -20,6 +20,11 @@
 			  	<label>E-mail:</label>
 				<input type="email" class="form-control" name="email" value="eduardo.duarte@al.infnet.edu.br">
 			</div>
+			
+			<div class="form-group">
+			  <label>Senha:</label>
+			  <input type="password" class="form-control" name="password" value="">
+			</div>
 				
 			<button type="submit">Cadastro</button>
 		</form>

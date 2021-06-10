@@ -20,11 +20,6 @@ public class Funcionario {
 	private int idade;
 	private String cargo;
 	private double salario;
-	
-	public Funcionario() {
-		
-	}
-
 
 	public Funcionario(String nome, String cpf, String email, String password, int idade, String cargo,
 			double salario) {

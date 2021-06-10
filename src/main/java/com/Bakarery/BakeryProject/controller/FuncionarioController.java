@@ -14,12 +14,16 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import com.Bakarery.BakeryProject.model.negocio.Funcionario;
 import com.Bakarery.BakeryProject.model.service.FuncionarioService;
 
-@SessionAttributes("user")
 @Controller
 public class FuncionarioController {
 	
 	@Autowired
 	private FuncionarioService funcionarioService;
+	
+	@RequestMapping(value = "/cadastroFuncionario", method =  RequestMethod.GET)
+	public String telaCadastroFuncionario() {
+		return "funcionario/cadastroFuncionario";
+	}
 	
 	@RequestMapping(value  = "/funcionario/incluir", method = RequestMethod.POST )
 	public String incluir(Funcionario funcionario, Model model) {
@@ -27,19 +31,7 @@ public class FuncionarioController {
 		System.out.println(funcionario);
 		System.out.println(funcionario.getNome() + " cadastrado com sucesso!");
 		funcionarioService.incluir(funcionario);
-		return "redirect:/";
-	}
-	
-	@PostMapping(value = "/funcionario/login")
-	public String validarLogin(Model model, @RequestParam String email, @RequestParam String password) {
-		
-		Funcionario funcionario = funcionarioService.validacao(email, password);
-		
-		if(funcionario != null) {
-			model.addAttribute("user", funcionario);
-			return "redirect:/home";
-		}
-		return "redirect:/";
+		return "redirect:/funcionario/lista";
 	}
 	
 	@GetMapping(value = "/funcionario/lista")

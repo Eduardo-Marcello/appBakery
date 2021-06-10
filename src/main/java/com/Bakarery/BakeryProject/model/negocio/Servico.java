@@ -1,6 +1,6 @@
 package com.Bakarery.BakeryProject.model.negocio;
 
-public abstract class Serviços {
+public abstract class Servico {
 	private Integer id;
 	
 	private String nomeServico;

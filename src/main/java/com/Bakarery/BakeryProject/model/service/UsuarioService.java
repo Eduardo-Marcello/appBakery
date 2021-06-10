@@ -13,15 +13,6 @@ public class UsuarioService {
 	
 	@Autowired
 	private IUsuarioRepository usuarioRepository;
-
-
-		public String obterStatus(Usuario usuario) {
-			
-			return usuario.calcularSalarioAnual() > 999 ? 
-					usuario.getNome() + ", que pessoa rica" : 
-						"Poxa, "+ usuario.getNome()+"!!! Tá difícil, né?!";  
-
-		}
 		
 		public void incluir(Usuario usuario) {
 			usuarioRepository.save(usuario);
@@ -30,10 +21,13 @@ public class UsuarioService {
 		public List<Usuario> obterLista() {
 		
 			return (List<Usuario>) usuarioRepository.findAll();
-			
 		}
 		
 		public void excluir(Integer id) {
 			usuarioRepository.deleteById(id);
+		}
+
+		public Usuario validacao(String email, String password) {
+			return usuarioRepository.autenticacao(email, password);
 		}
 }

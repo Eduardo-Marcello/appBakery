@@ -16,24 +16,4 @@ public class AppController {
 		public String telaLogin() {
 			return "login";
 		}
-		
-		@RequestMapping(value = "/cadastroFuncionario", method =  RequestMethod.GET)
-		public String telaCadastroFuncionario() {
-			return "funcionario/cadastroFuncionario";
-		}
-		
-		@RequestMapping(value = "/cadastroBuffet", method =  RequestMethod.GET)
-		public String telaCadastroBuffet() {
-			return "buffet/cadastroBuffet";
-		}
-		
-		@RequestMapping(value = "/cadastroDelivery", method =  RequestMethod.GET)
-		public String telaCadastroDelivery() {
-			return "delivery/cadastroDelivery";
-		}
-		
-		@RequestMapping(value = "/cadastroConveniencia", method =  RequestMethod.GET)
-		public String telaCadastroConveniencia() {
-			return "conveniencia/cadastroConveniencia";
-		}
 }

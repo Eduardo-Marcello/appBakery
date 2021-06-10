@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name ="TConveniencia")
-public class Conveniencia extends Serviços {
+public class Conveniencia extends Servico {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

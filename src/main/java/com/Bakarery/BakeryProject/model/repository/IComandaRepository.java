@@ -3,9 +3,9 @@ package com.Bakarery.BakeryProject.model.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.Bakarery.BakeryProject.model.negocio.Buffet;
+import com.Bakarery.BakeryProject.model.negocio.Comanda;
 
 @Repository
-public interface IBuffetRepository extends CrudRepository<Buffet, Integer>{
+public interface IComandaRepository extends CrudRepository<Comanda, Integer>{
 
 }

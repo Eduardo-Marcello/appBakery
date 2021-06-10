@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Bakarery.BakeryProject.model.negocio.Cliente;
 import com.Bakarery.BakeryProject.model.negocio.Funcionario;
 import com.Bakarery.BakeryProject.model.repository.IFuncionarioRepository;
 
@@ -19,14 +18,9 @@ public class FuncionarioService {
 		funcionarioRepository.save(funcionario);
 	}
 
-	public Funcionario validacao(String email, String password) {
-		return funcionarioRepository.autenticacao(email, password);
-	}
-
 	public List<Funcionario> obterLista() {
 
 		return (List<Funcionario>) funcionarioRepository.findAll();
-
 	}
 
 	public void excluir(Integer id) {
