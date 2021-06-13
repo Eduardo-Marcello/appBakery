@@ -9,6 +9,8 @@
 
 		<h1>Tela Inicial</h1>
 		
+		<h2>Eduardo Marcello</h2>
+		<h2>Sistema de Informações</h2>
 		<h2>Projeto de Bloco</h2>
 		
 		<h3>${user.nome}</h3>
