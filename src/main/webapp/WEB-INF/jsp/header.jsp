@@ -6,14 +6,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">BakeryApp</a>
+      <a class="navbar-brand" href="#">Dream'sBakery</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/home">Home</a></li>
+        <li><a href="/usuario/lista">Usuários</a></li>
         <li><a href="/comanda/lista">Comandas</a></li>
         <li><a href="/funcionario/lista">Funcionários</a></li>
-        <li><a href="#">Serviços</a></li>
+        <li><a href="/servico/lista">Serviços</a></li>
+        <li><a href="/buffet/lista">Buffet</a></li>
+        <li><a href="/conveniencia/lista">Conveniência</a></li>
+        <li><a href="/confeitaria/lista">Confeitaria</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>${user.nome}</li>

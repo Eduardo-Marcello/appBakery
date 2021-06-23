@@ -62,6 +62,16 @@ footer {
 
 	<div class="container">
 		<form action="/confeitaria/incluir" method="post">
+		
+		<div class="form-group">
+				<label>Nome do Serviço:</label> <input type="text" class="form-control"
+					name="nomeServico" value="Confeitaria">
+			</div>
+			
+			<div class="form-group">
+				<label>Situação:</label> <input type="text" class="form-control"
+					name="situacao" placeholder="Ativo/Inativo">
+			</div>
 
 			<div class="form-group">
 				<label>Codigo:</label> <input type="number" class="form-control"

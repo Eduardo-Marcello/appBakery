@@ -15,8 +15,16 @@ public class Conveniencia extends Servico {
 	private int codigoProduto;
 	private String nomeProduto;
 	private String classificacao;
-	private double preco;
 
+	public Conveniencia() {
+		
+	}
+	
+	public Conveniencia(int codigoProduto, String nomeProduto, String classificacao) {
+		this.codigoProduto = codigoProduto;
+		this.nomeProduto = nomeProduto;
+		this.classificacao = classificacao;
+	}
 
 	public int getCodigoProduto() {
 		return codigoProduto;
@@ -42,18 +50,11 @@ public class Conveniencia extends Servico {
 		this.classificacao = classificacao;
 	}
 
-	public double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
-	}
 
 	@Override
 	public String toString() {
 		return super.toString()+ " "+ codigoProduto +" " + nomeProduto + " "
-				+ classificacao + " " + preco;
+				+ classificacao;
 	}
 	
 }

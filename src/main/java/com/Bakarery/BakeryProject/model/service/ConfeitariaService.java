@@ -20,7 +20,7 @@ public class ConfeitariaService {
 
 	public List<Confeitaria> obterLista() {
 
-		return (List<Confeitaria>) confeitariaRepository.findAll();
+		return (List<Confeitaria>) confeitariaRepository.findAllByOrderByNomeDoce();
 	}
 
 	public void excluir(Integer id) {

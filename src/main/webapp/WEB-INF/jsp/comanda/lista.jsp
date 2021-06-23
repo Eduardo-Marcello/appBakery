@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -84,6 +84,9 @@ footer {
 					</c:forEach>
 				</tbody>
 			</table>
+		</c:if>
+		<c:if test="${empty comandas}">
+			<h3>Nenhuma comanda foi cadastrado!</h3>
 		</c:if>
 	</div>
 

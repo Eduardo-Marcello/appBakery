@@ -81,6 +81,9 @@ footer {
 				</tbody>
 			</table>
 		</c:if>
+		<c:if test="${empty buffet}">
+			<h3>Nenhum buffet foi cadastrado!</h3>
+		</c:if>
 	</div>
 
 </body>

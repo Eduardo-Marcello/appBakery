@@ -19,7 +19,7 @@ public class BuffetService {
 
 	public List<Buffet> obterLista() {
 
-		return (List<Buffet>) buffetRepository.findAll();
+		return (List<Buffet>) buffetRepository.findAllByOrderByPrato();
 	}
 
 	public void excluir(Integer id) {

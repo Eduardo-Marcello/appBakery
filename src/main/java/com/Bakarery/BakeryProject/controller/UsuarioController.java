@@ -1,8 +1,7 @@
 package com.Bakarery.BakeryProject.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.Bakarery.BakeryProject.model.negocio.Funcionario;
 import com.Bakarery.BakeryProject.model.negocio.Usuario;
 import com.Bakarery.BakeryProject.model.service.UsuarioService;
 
@@ -36,7 +34,7 @@ public class UsuarioController {
 		
 		usuarioService.incluir(usuario);
 
-		return "redirect:/usuario/lista";
+		return "redirect:/";
 	}
 	
 	@PostMapping(value = "/usuario/login")
@@ -47,6 +45,8 @@ public class UsuarioController {
 		if(usuario != null) {
 			model.addAttribute("user", usuario);
 			return "redirect:/home";
+		} else {
+			model.addAttribute("aviso", "Credenciais inválidas, ou inexistentes!");
 		}
 		return "redirect:/";
 	}
@@ -60,7 +60,8 @@ public class UsuarioController {
 	
 	@GetMapping(value = "/usuario/{id}/excluir")
 	public String excluir(@PathVariable Integer id) {
-
+		
+		
 		usuarioService.excluir(id);
 		
 		return "redirect:/usuario/lista";

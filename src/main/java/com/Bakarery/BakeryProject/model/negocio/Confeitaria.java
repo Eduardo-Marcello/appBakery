@@ -12,17 +12,15 @@ public class Confeitaria extends Servico {
 	private int codigoDoce;
 	private String tipoDoce;
 	private String nomeDoce;
-	private double preco;
 	
 	public Confeitaria() {
 		
 	}
 	
-	public Confeitaria(int codigoDoce, String tipoDoce, String nomeDoce, double preco) {
+	public Confeitaria(int codigoDoce, String tipoDoce, String nomeDoce) {
 		this.codigoDoce = codigoDoce;
 		this.tipoDoce = tipoDoce;
 		this.nomeDoce = nomeDoce;
-		this.preco = preco;
 	}
 
 	public int getCodigoDoce() {
@@ -49,18 +47,11 @@ public class Confeitaria extends Servico {
 		this.nomeDoce = nomeDoce;
 	}
 	
-	public double getPreco() {
-		return preco;
-	}
-	
-	public void setPreco(double preco) {
-		this.preco = preco;
-	}
 
 	@Override
 	public String toString() {
 		return "Confeitaria [codigoDoce=" + codigoDoce + ", tipoDoce=" + tipoDoce + ", nomeDoce=" + nomeDoce
-				+ ", preco=" + preco + "]";
+				+ "]";
 	}
 	
 	

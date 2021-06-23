@@ -21,7 +21,7 @@ public class ConvenienciaService {
 
 	public List<Conveniencia> obterLista() {
 
-		return (List<Conveniencia>) convenienciaRepository.findAll();
+		return (List<Conveniencia>) convenienciaRepository.findAllByOrderByNomeProduto();
 	}
 
 	public void excluir(Integer id) {

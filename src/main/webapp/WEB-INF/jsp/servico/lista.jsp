@@ -58,33 +58,31 @@ footer {
 	<c:import url="/WEB-INF/jsp/header.jsp"></c:import>
 
 	<div class="container">
-		<c:if test="${not empty produtos}">
+		<c:if test="${not empty servicos}">
 			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>Id</th>
-						<th>Codigo</th>
-						<th>Nome</th>
-						<th>Classificação</th>
+						<th>Nome do Servico</th>
+						<th>Situação</th>
 						<th>Preço</th>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="p" items="${produtos}">
+					<c:forEach var="s" items="${servicos}">
 						<tr>
-							<td>${p.id}</td>
-							<td>${p.codigoProduto}</td>
-							<td>${p.nomeProduto}</td>
-							<td>${p.classificacao}</td>
-							<td>${p.preco}</td>
-							<td><a href="/conveniencia/${p.id}/excluir">excluir</a></td>
+							<td>${s.id}</td>
+							<td>${s.nomeServico}</td>
+							<td>${s.situacao}</td>
+							<td>${s.preco}</td>
+							<td><a href="/servicos/${p.id}/excluir">excluir</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
 		</c:if>
-		<c:if test="${empty produtos}">
-			<h3>Nenhum produto da loja foi cadastrado!</h3>
+		<c:if test="${empty servicos}">
+			<h3>Nenhum servico foi cadastrado!</h3>
 		</c:if>
 	</div>
 

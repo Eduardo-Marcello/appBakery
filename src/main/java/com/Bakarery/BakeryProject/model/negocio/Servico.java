@@ -19,8 +19,18 @@ public abstract class Servico {
 	
 	private String nomeServico;
 	private String situacao;
-	private boolean flagSituacao;
+	private double preco;
 	
+	public Servico() {
+		
+	}
+	
+	public Servico(String nomeServico, String situacao, double preco) {
+		this.nomeServico = nomeServico;
+		this.situacao = situacao;
+		this.preco = preco;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -37,6 +47,23 @@ public abstract class Servico {
 		this.nomeServico = nomeServico;
 	}
 	
+	public double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+	
+
+	public String getSituacao() {
+		return situacao;
+	}
+
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
+	}
+
 	@Override
 	public String toString() {
 		return nomeServico + " " + situacao + " ";

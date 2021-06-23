@@ -12,22 +12,26 @@ import javax.persistence.Table;
 @PrimaryKeyJoinColumn(name = "id_servico")
 public class Buffet extends Servico {
 
-	private String situacao;
+	private String tipo;
 	private String prato;
-	private double preco;
+	private boolean infantil;
 	
-	public Buffet(String situacao, String prato, double preco) {
-		this.situacao = situacao;
+	public Buffet() {
+		
+	}
+	
+	public Buffet(String tipo, String prato, boolean infantil) {
+		this.tipo = tipo;
 		this.prato = prato;
-		this.preco = preco;
+		this.infantil = infantil;
 	}
 
-	public String getSituacao() {
-		return situacao;
+	public String getTipo() {
+		return tipo;
 	}
 
-	public void setSituacao(String situacao) {
-		this.situacao = situacao;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
 	public String getPrato() {
@@ -37,18 +41,18 @@ public class Buffet extends Servico {
 	public void setPrato(String prato) {
 		this.prato = prato;
 	}
-
-	public double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
-	}
 	
+	public boolean isInfantil() {
+		return infantil;
+	}
+
+	public void setInfantil(boolean infantil) {
+		this.infantil = infantil;
+	}
+
 	@Override
 	public String toString() {
-		return super.toString()+" " + situacao + " " + prato + " " + preco;
+		return super.toString()+" " + tipo + " " + prato;
 	}
 
 	

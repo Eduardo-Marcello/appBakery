@@ -64,13 +64,28 @@ footer {
 		<form action="/buffet/incluir" method="post">
 
 			<div class="form-group">
+				<label>Nome do Serviço:</label> <input type="text"
+					class="form-control" name="nomeServico" value="Buffet">
+			</div>
+
+			<div class="form-group">
 				<label>Situação:</label> <input type="text" class="form-control"
-					name="situacao">
+					name="situacao" placeholder="Ativo/Inativo">
+			</div>
+
+			<div class="form-group">
+				<label>Tipo:</label> <input type="text" class="form-control"
+					name="tipo" placeholder="Café da manhã/Almoço/Jantar">
 			</div>
 
 			<div class="form-group">
 				<label>Prato:</label> <input type="text" class="form-control"
 					name="prato">
+			</div>
+			
+			<div class="form-group">
+				<label>Infantil?</label> <input type="text" class="form-control"
+					name="infantil" placeholder="true/false">
 			</div>
 
 			<div class="form-group">

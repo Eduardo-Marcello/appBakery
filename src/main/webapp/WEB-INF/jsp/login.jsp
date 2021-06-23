@@ -36,7 +36,8 @@
 			</form>
 
 			<div id="formFooter">
-				<a class="underlineHover" href="/usuario/redefiniSenha">Esqueceu a senha?</a>
+				<a class="underlineHover" href="/usuario/redefiniSenha">Esqueceu
+					a senha?</a>
 			</div>
 
 			<div id="formFooter">
