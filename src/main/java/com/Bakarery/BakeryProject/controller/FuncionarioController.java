@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.Bakarery.BakeryProject.model.negocio.Funcionario;
+import com.Bakarery.BakeryProject.model.negocio.Usuario;
 import com.Bakarery.BakeryProject.model.service.FuncionarioService;
 
 @Controller
@@ -26,18 +28,17 @@ public class FuncionarioController {
 	}
 	
 	@RequestMapping(value  = "/funcionario/incluir", method = RequestMethod.POST )
-	public String incluir(Funcionario funcionario, Model model) {
+	public String incluir(Funcionario funcionario, @SessionAttribute("user") Usuario usuario) {
 		
-		System.out.println(funcionario);
-		System.out.println(funcionario.getNome() + " cadastrado com sucesso!");
+		funcionario.setUsuario(usuario);
 		funcionarioService.incluir(funcionario);
 		return "redirect:/funcionario/lista";
 	}
 	
 	@GetMapping(value = "/funcionario/lista")
-	public String obterLista(Model model) {
+	public String obterLista(Model model, @SessionAttribute("user") Usuario usuario) {
 		
-		model.addAttribute("funcionarios", funcionarioService.obterLista());
+		model.addAttribute("funcionarios", funcionarioService.obterLista(usuario));
 		return "funcionario/lista";
 	}
 	

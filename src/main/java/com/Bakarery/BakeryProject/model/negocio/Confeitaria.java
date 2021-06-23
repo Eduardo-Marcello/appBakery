@@ -1,6 +1,12 @@
 package com.Bakarery.BakeryProject.model.negocio;
 
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
 
+@Entity
+@Table(name ="TConfeitaria")
+@PrimaryKeyJoinColumn(name = "id_servico")
 public class Confeitaria extends Servico {
 	
 	private int codigoDoce;

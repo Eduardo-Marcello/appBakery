@@ -5,9 +5,11 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.Bakarery.BakeryProject.model.negocio.Comanda;
+import com.Bakarery.BakeryProject.model.negocio.Usuario;
 import com.Bakarery.BakeryProject.model.repository.IComandaRepository;
 
 @Service
@@ -28,11 +30,13 @@ public class ComandaService {
 			comanda.setHora(hora);
 		}
 
-		public List<Comanda> obterLista() {
-			return (List<Comanda>) comandaRepository.findAll();
+		public List<Comanda> obterLista(Usuario usuario) {
+			return (List<Comanda>) comandaRepository.obterLista(usuario.getId(), Sort.by(Sort.Direction.ASC, "data"));
 		}
 		
 		public void excluir(Integer id) {
 			comandaRepository.deleteById(id);
 		}
+		
+	
 }

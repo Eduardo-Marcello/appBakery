@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -35,12 +36,11 @@
 			</form>
 
 			<div id="formFooter">
-				<a class="underlineHover" href="">Esqueceu a senha?</a>
+				<a class="underlineHover" href="/usuario/redefiniSenha">Esqueceu a senha?</a>
 			</div>
 
 			<div id="formFooter">
-				<a class="underlineHover" href="/usuario">Não possui
-					cadastro?</a>
+				<a class="underlineHover" href="/usuario">Novo usuario</a>
 			</div>
 		</div>
 	</div>

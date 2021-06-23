@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -56,31 +56,34 @@ footer {
 <body>
 
 	<c:import url="/WEB-INF/jsp/header.jsp"></c:import>
-	<div class="jumbotron text-center">
-		<h1>Cadastro Buffet</h1>
-	</div>
 
 	<div class="container">
-		<form action="/buffet/incluir" method="post">
-
-			<div class="form-group">
-				<label>Situação:</label> <input type="text" class="form-control"
-					name="situacao">
-			</div>
-
-			<div class="form-group">
-				<label>Prato:</label> <input type="text" class="form-control"
-					name="prato">
-			</div>
-
-			<div class="form-group">
-				<label>Preço:</label> <input type="number" step="0.01"
-					class="form-control" name="preco">
-			</div>
-
-			<button type="submit">Cadastrar</button>
-
-		</form>
+		<c:if test="${not empty doces}">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Codigo</th>
+						<th>Tipo</th>
+						<th>Nome</th>
+						<th>Preço</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="d" items="${doces}">
+						<tr>
+							<td>${d.id}</td>
+							<td>${d.codigoDoce}</td>
+							<td>${d.tipoDoce}</td>
+							<td>${d.nomeDoce}</td>
+							<td>${d.preco}</td>
+							<td><a href="/confeitaria/${d.id}/excluir">excluir</a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</c:if>
 	</div>
+
 </body>
 </html>

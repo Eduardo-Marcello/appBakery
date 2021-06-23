@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,6 +15,7 @@ public class Funcionario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	private String nome;
 	private String cpf;
 	private String email;
@@ -20,6 +23,14 @@ public class Funcionario {
 	private int idade;
 	private String cargo;
 	private double salario;
+	
+	@ManyToOne
+	@JoinColumn(name = "id_usuario")
+	private Usuario usuario;
+	
+	public Funcionario() {
+		
+	}
 
 	public Funcionario(String nome, String cpf, String email, String password, int idade, String cargo,
 			double salario) {
@@ -32,6 +43,13 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 
 	public Integer getId() {
 		return id;
@@ -94,8 +112,6 @@ public class Funcionario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
 	
 	
 }
