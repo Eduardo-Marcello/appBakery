@@ -21,6 +21,13 @@
 
 			<form action="/usuario/login" method="post">
 				<div class="form-group">
+
+					<c:if test="${not empty aviso}">
+						<div class="alert alert-warning">
+							<strong>Warning!</strong> ${aviso}
+						</div>
+					</c:if>
+
 					<label>Login:</label> <input type="text" class="form-control"
 						name="email" id="email" required="">
 				</div>

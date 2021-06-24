@@ -21,6 +21,8 @@ public class UsuarioController {
 	
 	@Autowired
 	private UsuarioService usuarioService;
+	@Autowired
+	private AppController ac;
 	
 	@RequestMapping(value = "/usuario", method =  RequestMethod.GET)
 	public String telaCadastroUsuario() {
@@ -47,8 +49,9 @@ public class UsuarioController {
 			return "redirect:/home";
 		} else {
 			model.addAttribute("aviso", "Credenciais inválidas, ou inexistentes!");
+			return ac.telaLogin();
 		}
-		return "redirect:/";
+//		return "redirect:/";
 	}
 	
 	@GetMapping(value = "/usuario/lista")
