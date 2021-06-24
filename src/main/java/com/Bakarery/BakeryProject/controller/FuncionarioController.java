@@ -43,10 +43,15 @@ public class FuncionarioController {
 	}
 	
 	@GetMapping(value = "/funcionario/{id}/excluir")
-	public String excluir(@PathVariable Integer id) {
+	public String excluir(@PathVariable Integer id, Model model, @SessionAttribute("user") Usuario usuario) {
 
-		funcionarioService.excluir(id);
+		try {
+			funcionarioService.excluir(id);
+			return "redirect:/funcionario/lista";
+		} catch (Exception e) {
+			model.addAttribute("aviso", "Ação inválida pois o funcionário está ligado a uma comanda!");
+			return obterLista(model, usuario);
+		}
 		
-		return "redirect:/funcionario/lista";
 	}
 }

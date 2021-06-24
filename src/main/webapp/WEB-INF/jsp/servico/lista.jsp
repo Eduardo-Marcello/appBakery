@@ -75,7 +75,7 @@ footer {
 							<td>${s.nomeServico}</td>
 							<td>${s.situacao}</td>
 							<td>${s.preco}</td>
-							<td><a href="/servicos/${p.id}/excluir">excluir</a></td>
+							<td><a href="/servicos/${s.id}/excluir">excluir</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

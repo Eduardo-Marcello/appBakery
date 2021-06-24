@@ -25,7 +25,7 @@ public class ServicoController {
 		return "servico/lista";
 	}
 	
-	@GetMapping(value = "/servico/{id}/excluir")
+	@GetMapping(value = "/servicos/{id}/excluir")
 	public String excluir(@PathVariable Integer id) {
 
 		servicoService.excluir(id);

@@ -58,6 +58,11 @@ footer {
 	<c:import url="/WEB-INF/jsp/header.jsp"></c:import>
 
 	<div class="container">
+		<c:if test="${not empty aviso}">
+			<div class="alert alert-warning">
+				<strong>Warning!</strong> ${aviso}
+			</div>
+		</c:if>
 		<c:if test="${not empty funcionarios}">
 			<table class="table table-striped">
 				<thead>
